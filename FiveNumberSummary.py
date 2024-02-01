@@ -23,4 +23,5 @@ def calculate_five_number_summary(data):
     print(f"Standard Deviation: {standard_deviation}")
 
 calc = calculate_five_number_summary
-calc([2.3, 8.6, 5.4, 3.1, 2.7, 9.3, 7.4, 8.1, 10.2, 11.3])
+calc([array])
+#Replace array with an actual array (e.g. [1, 2, 3, 4, 5])

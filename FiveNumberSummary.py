@@ -7,7 +7,7 @@ def calculate_five_number_summary(data):
     maximum = max(data)
     range = maximum - minimum
     quartile_2 = statistics.median(data)
-    mean = (sum(data) / len(data))
+    mean = (sum(data) / length)
     standard_deviation = statistics.stdev(odata)
     quartile_1 = "null"
     quartile_3 = "null"

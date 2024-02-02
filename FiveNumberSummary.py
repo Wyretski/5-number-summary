@@ -6,7 +6,9 @@ def calculate_five_number_summary(data):
     maximum = max(data)
     quartile_2 = statistics.median(data)
     mean = (sum(data) / len(data))
-    standard_deviation = statistics.stdev(data)
+    standard_deviation = statistics.stdev(odata)
+    quartile_1 = "null"
+    quartile_3 = "null"
 
 #Empty incomplete looking f-strings are incomplete. I'll complete them at some point.
     print(f"Unordered: {data}")

@@ -8,6 +8,7 @@ def calculate_five_number_summary(data):
     mean = (sum(data) / len(data))
     standard_deviation = statistics.stdev(data)
 
+#Empty incomplete looking f-strings are incomplete. I'll complete them at some point.
     print(f"Unordered: {data}")
     print(f"Ordered: {order}")
     print(f"Min: {min}")

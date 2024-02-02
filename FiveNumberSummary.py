@@ -1,9 +1,11 @@
 import statistics
 
 def calculate_five_number_summary(data):
+    length = len(data)
     order = sorted(data)
     minimum = min(data)
     maximum = max(data)
+    range = maximum - minimum
     quartile_2 = statistics.median(data)
     mean = (sum(data) / len(data))
     standard_deviation = statistics.stdev(odata)
@@ -11,14 +13,16 @@ def calculate_five_number_summary(data):
     quartile_3 = "null"
 
 #Empty incomplete looking f-strings are incomplete. I'll complete them at some point.
+    print(f"Length: {data}")
     print(f"Unordered: {data}")
     print(f"Ordered: {order}")
     print(f"Min: {min}")
-    print(f"Q1: {}")
+    print(f"Q1: {quartile_1}")
     print(f"Q2: {quartile_2}")
-    print(f"Q3: {}")
+    print(f"Q3: {quartile_3}")
     print(f"Mean: {mean}")
     print(f"Standard Deviation: {standard_deviation}")
+    print(f"Range: {range}")
 
 calc = calculate_five_number_summary
 calc([array])

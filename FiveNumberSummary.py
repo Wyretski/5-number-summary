@@ -13,7 +13,7 @@ def calculate_five_number_summary(data):
     quartile_3 = "null"
 
 #Empty incomplete looking f-strings are incomplete. I'll complete them at some point.
-    print(f"Length: {data}")
+    print(f"Length: {length}")
     print(f"Unordered: {data}")
     print(f"Ordered: {order}")
     print(f"Min: {minimum}")

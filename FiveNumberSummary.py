@@ -5,14 +5,16 @@ def calculate_five_number_summary(data):
     order = sorted(data)
     minimum = min(data)
     maximum = max(data)
-    range = maximum - minimum
     quartile_2 = statistics.median(data)
-    mean = (sum(data) / length)
+    mean = (sum(data) / len(data))
     standard_deviation = statistics.stdev(data)
-    quartile_1 = "null"
-    quartile_3 = "null"
+    
+    if length % 2 != 0:
+        order.pop(quartile_2)
+    
+    quartile_1 = statistics.median(order[:length//2])
+    quartile_3 = statistics.median(order[length//2:])
 
-#Empty incomplete looking f-strings are incomplete. I'll complete them at some point.
     print(f"Length: {length}")
     print(f"Unordered: {data}")
     print(f"Ordered: {order}")
@@ -23,8 +25,7 @@ def calculate_five_number_summary(data):
     print(f"Max: {maximum}")
     print(f"Mean: {mean}")
     print(f"Standard Deviation: {standard_deviation}")
-    print(f"Range: {range}")
 
 calc = calculate_five_number_summary
-calc([array])
+calc([0, 1, 2, 3, 4, 5, 6])
 #Replace [array] with an actual array (e.g. [1, 2, 3, 4, 5])

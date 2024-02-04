@@ -20,13 +20,17 @@ def calculate_five_number_summary(data):
     
     if length % 2 != 0:
         order.remove(quartile_2)
+    else:
+        print("")
     
     quartile_1 = statistics.median(order[:length//2])
     quartile_3 = statistics.median(order[length//2:])
+    interquartile_range = quartile_3 - quartile_1
    
     print(f"Q1: {quartile_1}")
     print(f"Q3: {quartile_3}")
+    print(f"IQR: {interquartile_range}")
 
 calc = calculate_five_number_summary
-calc([array])
+calc([270, 270, 270, 270, 270, 270, 270, 270, 270, 270, 300, 310, 410, 440, 470])
 #Replace [array] with an actual array (e.g. [1, 2, 3, 4, 5])

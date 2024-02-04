@@ -19,7 +19,7 @@ def calculate_five_number_summary(data):
     print(f"Standard Deviation: {standard_deviation}")
     
     if length % 2 != 0:
-        order.pop(quartile_2)
+        order.remove(quartile_2)
     
     quartile_1 = statistics.median(order[:length//2])
     quartile_3 = statistics.median(order[length//2:])

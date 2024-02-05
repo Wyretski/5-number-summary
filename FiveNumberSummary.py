@@ -8,6 +8,7 @@ def calculate_five_number_summary(data):
     quartile_2 = statistics.median(data)
     mean = (sum(data) / len(data))
     standard_deviation = statistics.stdev(data)
+    range = maximum - minimum
 
     print(f"Length: {length}")
     print(f"Unordered: {data}")
@@ -17,6 +18,7 @@ def calculate_five_number_summary(data):
     print(f"Max: {maximum}")
     print(f"Mean: {mean}")
     print(f"Standard Deviation: {standard_deviation}")
+    print(f"Range: {range}")
     
     if length % 2 != 0:
         order.remove(quartile_2)
@@ -32,5 +34,5 @@ def calculate_five_number_summary(data):
     print(f"IQR: {interquartile_range}")
 
 calc = calculate_five_number_summary
-calc([270, 270, 270, 270, 270, 270, 270, 270, 270, 270, 300, 310, 410, 440, 470])
+calc([85, 87, 98, 82, 77, 88])
 #Replace [array] with an actual array (e.g. [1, 2, 3, 4, 5])
